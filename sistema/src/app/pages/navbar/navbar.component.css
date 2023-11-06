@@ -1,0 +1,81 @@
+.nav-header {
+    height: 50px;
+    color: #000000;
+    font-size: 16px;
+    font-weight: bold;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    position: relative;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    box-shadow: 0 7px 5px rgba(0, 0, 0, 0.1);
+}
+
+.nav-header h1 {
+    margin: 0; /* Elimina el margen superior e inferior del título "IDEAL ROOM" */
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.nav-header a {
+    display: flex;
+    align-items: center; /* Centra verticalmente el contenido del enlace */
+    color: #fff;
+    font-family: sans-serif;
+    font-size: 15px; /* Establece el tamaño de fuente en 34px */
+    text-decoration: none;
+    font-weight: lighter;
+    margin-right: 20px; /* Añade margen a la derecha del enlace */
+}
+
+.nav-header img {
+    width: 30px; /* Ajusta el tamaño de la imagen según tus necesidades */
+    border-radius: 50%; /* Aplica un borde redondeado a la imagen si es necesario */
+    margin-left: 5px; /* Añade margen a la izquierda de la imagen */
+    border: 1px solid #000000;
+}
+
+.side-bar{
+    margin-top: 50px;
+    width: 100px; /* Ancho inicial del aside */
+    height: 100%;
+    background-color: #333;
+    color: #000000;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    transition: width 0.5s; /* Agrega una transición de ancho para la animación */
+    overflow-x: hidden; /* Evita que el contenido desborde horizontalmente al contraerse */
+}
+
+.inside-aside{
+    margin-top: 20px;
+
+}
+ul{
+    list-style: none; /* Elimina los puntos de lista predeterminados */
+    padding: 0; /* Elimina el relleno predeterminado de la lista */
+    display: flex; /* Utiliza flexbox para alinear verticalmente los elementos de la lista */
+    flex-direction: column; /* Alinea los elementos verticalmente en una columna */
+    align-items: center;
+}
+.opciones {
+    margin-bottom: 20px;
+    /* text-align: center; */
+    border: 2px solid rgba(0, 0, 0, 0.10);
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 5px;
+    border-width: 4px; /* Define el ancho del borde, ajusta según tus necesidades */
+    height: 55px; /* Define la altura, ajusta según tus necesidades */
+    width: 75px;
+    display: flex;
+    flex-direction: column; /* Alinea los elementos en columna */
+    align-items: center; /* Alinea horizontalmente el contenido al centro */
+    justify-content: center;
+}
