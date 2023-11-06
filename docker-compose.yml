@@ -5,15 +5,17 @@ services:
   angular_app:
     container_name: angular_app
     image: pee-angular_app:1.0.0
-    build: ./sistema/
+    build: ./sistema/dockerfile
     ports:
-      - 4200:4200
+      - "8000:4200"
     depends_on:
       - java_app
   java_app:
     container_name: java_app
     image: pee-java_app:1.0.0
-    build: .
+    build:
+      context: .
+      dockerfile: DockerFile
     ports:
       - "4000:4000"
     environment:
@@ -23,12 +25,15 @@ services:
       - java_db
   java_db:
     container_name: java_db
-    image: mysql
+    image: mysql:latest
     ports:
       - 3306:3306
     environment:
-      MYSQL_ROOT_PASSWORD: 
-      MYSQL_USER: root
-      MYSQL_DB: base
+      MYSQL_ROOT_PASSWORD: 1234
+      MYSQL_USER: sharon
+      MYSQL_PASSWORD: 1234
+      MYSQL_DATABASE: sharon
     volumes:
-      -./mysql-data:/var/lib/mysql
+      - db_data:/var/lib/mysql
+volumes:
+  db_data:
